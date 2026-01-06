@@ -1,3 +1,4 @@
+/* IMPORT FONT */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
 * {
@@ -8,7 +9,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: #f1f5f9;
+    background: #f9fafb;
     color: #333;
     line-height: 1.6;
 }
@@ -18,16 +19,24 @@ header {
     background: linear-gradient(135deg, #2563eb, #1e40af);
     color: white;
     text-align: center;
-    padding: 2.5rem 1rem;
+    padding: 2rem 1rem;
+    position: relative;
+}
+
+header img {
+    width: 220px;
+    display: block;
+    margin: auto;
 }
 
 header h1 {
-    font-size: 2.2rem;
+    font-size: 2rem;
+    margin-top: 0.5rem;
 }
 
 header p {
+    font-size: 1rem;
     opacity: 0.9;
-    margin-top: 0.5rem;
 }
 
 /* NAVBAR */
@@ -36,14 +45,18 @@ nav {
     display: flex;
     justify-content: center;
     gap: 1.5rem;
-    padding: 1rem;
+    padding: 0.8rem;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 nav a {
     text-decoration: none;
     color: #2563eb;
     font-weight: 500;
+    transition: color 0.3s;
 }
 
 nav a:hover {
@@ -57,43 +70,33 @@ nav a:hover {
     padding: 0 1rem;
 }
 
-/* BLOG POSTS */
+/* BLOG POST CARDS */
 .post {
     background: white;
     padding: 1.5rem;
     border-radius: 12px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-    margin-bottom: 1.5rem;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin-bottom: 2rem;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .post:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.12);
-}
-
-.post h3 {
-    margin-bottom: 0.5rem;
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
 }
 
 .post h3 a {
     color: #1e40af;
     text-decoration: none;
+    transition: color 0.3s;
+}
+
+.post h3 a:hover {
+    color: #2563eb;
 }
 
 .post p {
     color: #555;
-}
-
-/* ARTICLE PAGE */
-.container h2 {
-    margin-bottom: 1rem;
-    color: #1e40af;
-}
-
-.container ul {
-    margin-left: 1.2rem;
-    margin-top: 1rem;
 }
 
 /* FOOTER */
@@ -101,15 +104,29 @@ footer {
     text-align: center;
     background: #1e293b;
     color: white;
-    padding: 1rem;
-    margin-top: 3rem;
+    padding: 1.5rem;
     font-size: 0.9rem;
+    margin-top: 3rem;
+}
+
+/* BUTTONS (Optional) */
+.button {
+    background: #2563eb;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.button:hover {
+    background: #1e40af;
 }
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
     header h1 {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
 
     nav {
